@@ -17,10 +17,12 @@ header {
 }
 
 .main-wrap {
+  box-sizing: border-box;
   height: 100vh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 60px;
 }
 
 .earpods {
@@ -37,6 +39,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 80px;
 }
 
 .earpods__headphones {
@@ -46,18 +49,25 @@ header {
 }
 
 .earpods__headphones-left {
-  transform: translateY(-35px);
+  transform: translateY(-95px);
   position: absolute;
-  left: 12px;
+  width: 70px;
+  left: -12px;
 }
 
 .earpods__headphones-right {
-  transform: translateY(-60px);
+  transform: translateY(-130px);
+  width: 100px;
   position: absolute;
 }
 
 .earpods__case {
+  width: 180px;
   z-index: 1;
+}
+
+.earpods__case-cover {
+  width: 170px;
 }
 
 /* More */
