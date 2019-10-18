@@ -1,0 +1,67 @@
+/* Settings */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: grey;
+}
+
+.container {
+  max-width: 1170px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.main-wrap {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.earpods {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  width: 150px;
+  height: 200px;
+}
+
+.earpods-case {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.earpods__headphones {
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+}
+
+.earpods__headphones-left {
+  transform: translateY(-35px);
+  position: absolute;
+  left: 12px;
+}
+
+.earpods__headphones-right {
+  transform: translateY(-60px);
+  position: absolute;
+}
+
+.earpods__case {
+  z-index: 1;
+}
+
+/* More */
+.more {
+  width: 100%;
+  height: 1000px;
+}
