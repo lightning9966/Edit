@@ -23,6 +23,7 @@ header {
   justify-content: center;
   align-items: flex-end;
   padding: 50px;
+  transition-duration: 1s;
 }
 
 .earpods {
