@@ -1,18 +1,36 @@
-  window.onscroll = function() {
-  let headphonesLeft = document.querySelector('.earpods__headphones-left');
-  let headphonesRight = document.querySelector('.earpods__headphones-right');
+function changePositionEarpods () {
+  let mainWrap = document.querySelector('.main-wrap');
+  
+  if (window.pageYOffset > window.innerHeight - 30) {
+    mainWrap.style.paddingBottom = '50px'
 
-  if (window.pageYOffset > 55 && window.pageYOffset < 1550) {
-    headphonesLeft.style.transform = `translateY(${(-window.pageYOffset / 3) -65}px)`
-    console.log(window.pageYOffset)
   } else {
-    headphonesLeft.style.top = `translateY(-35px)`
+    mainWrap.style.paddingBottom = `${window.innerHeight + 50 - window.pageYOffset}px`
   }
+}
 
-  if (window.pageYOffset > 55 && window.pageYOffset < 1550) {
-    headphonesRight.style.transform = `translateY(${(-window.pageYOffset / 1.25) -70}px)`
-    console.log(window.pageYOffset)
-} else {
-    headphonesLeft.style.top = `translateY(-60px)`
+function changePositionLeftEarpods () {
+  let headphonesLeft = document.querySelector('.earpods__headphones-left');
+  
+  if (window.pageYOffset > 78 && window.pageYOffset < 1550) {
+    headphonesLeft.style.transform = `translateY(${(-window.pageYOffset / 5) -65}px)`
+  } else {
+    headphonesLeft.style.top = `translateY(-115px)`
   }
+}
+
+function changePositionRightEarpods () {
+  let headphonesRight = document.querySelector('.earpods__headphones-right');
+  
+  if (window.pageYOffset > 91 && window.pageYOffset < 1550) {
+    headphonesRight.style.transform = `translateY(${(-window.pageYOffset / 3) -70}px)`
+  } else {
+    headphonesRight.style.top = `translateY(-65px)`
+  }
+}
+window.onscroll = function() {
+
+  changePositionEarpods();
+  changePositionLeftEarpods();
+  changePositionRightEarpods();
 }

@@ -7,7 +7,7 @@
 }
 
 header {
-  background-color: grey;
+  background: linear-gradient( to top left, #336666, #181d21)
 }
 
 .container {
@@ -18,11 +18,11 @@ header {
 
 .main-wrap {
   box-sizing: border-box;
-  height: 100vh;
+  height: 200vh;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  padding-bottom: 60px;
+  padding-bottom: 105vh;
 }
 
 .earpods {
@@ -33,6 +33,7 @@ header {
   align-items: center;
   width: 150px;
   height: 200px;
+  transition: 5s;
 }
 
 .earpods-case {
@@ -53,12 +54,14 @@ header {
   position: absolute;
   width: 70px;
   left: -12px;
+  transition: 0.3s;
 }
 
 .earpods__headphones-right {
   transform: translateY(-130px);
   width: 100px;
   position: absolute;
+  transition: 0.3s;
 }
 
 .earpods__case {
