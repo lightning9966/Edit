@@ -1,18 +1,18 @@
-function changePositionEarpods () {
-  let mainWrap = document.querySelector('.main-wrap');
-  
-  if (window.pageYOffset > window.innerHeight - 30) {
-    mainWrap.style.paddingBottom = '50px'
+function changeEarpods () {
+  let earpods = document.querySelector('.earpods') 
 
-  } else {
-    mainWrap.style.paddingBottom = `${window.innerHeight + 50 - window.pageYOffset}px`
+  console.log(window.pageYOffset)
+  if (window.pageYOffset > 1200) {
+    earpods.classList.remove("earpods-f")
   }
 }
 
 function changePositionLeftEarpods () {
   let headphonesLeft = document.querySelector('.earpods__headphones-left');
+
+  console.log(window.pageYOffset)
   
-  if (window.pageYOffset > 78 && window.pageYOffset < 1550) {
+  if (window.pageYOffset > 68 && window.pageYOffset < 1550) {
     headphonesLeft.style.transform = `translateY(${(-window.pageYOffset / 5) -65}px)`
   } else {
     headphonesLeft.style.top = `translateY(-115px)`
@@ -30,7 +30,7 @@ function changePositionRightEarpods () {
 }
 window.onscroll = function() {
 
-  changePositionEarpods();
+  changeEarpods();
   changePositionLeftEarpods();
   changePositionRightEarpods();
 }
