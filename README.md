@@ -1,1 +1,1 @@
-# Edits
+# Parallax effects for web site
